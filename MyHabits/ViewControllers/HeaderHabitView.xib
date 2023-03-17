@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderHabitView" customModule="MyHabits" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="178"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJn-FC-d4B">
+                    <rect key="frame" x="12" y="9.9999999999999982" width="422" height="20.333333333333329"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Все получится!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75u-rC-HB1">
+                            <rect key="frame" x="0.0" y="0.0" width="380.66666666666669" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" systemColor="systemGrayColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-eQ-WJ4">
+                            <rect key="frame" x="380.66666666666669" y="0.0" width="41.333333333333314" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mal-Wl-3uP">
+                    <rect key="frame" x="12" y="40.333333333333336" width="422" height="4"/>
+                    <color key="tintColor" name="dPurple"/>
+                </progressView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HJn-FC-d4B" secondAttribute="trailing" constant="12" id="3tc-fQ-68O"/>
+                <constraint firstItem="Mal-Wl-3uP" firstAttribute="top" secondItem="HJn-FC-d4B" secondAttribute="bottom" constant="10" id="CHz-ch-7BK"/>
+                <constraint firstItem="HJn-FC-d4B" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="12" id="Q3E-Px-aXS"/>
+                <constraint firstAttribute="trailing" secondItem="Mal-Wl-3uP" secondAttribute="trailing" constant="12" id="ZoX-NY-YRQ"/>
+                <constraint firstItem="HJn-FC-d4B" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="emd-90-PLj"/>
+                <constraint firstItem="Mal-Wl-3uP" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="12" id="n02-Rt-NmB"/>
+            </constraints>
+            <connections>
+                <outlet property="procentLabel" destination="0W8-eQ-WJ4" id="fhT-ah-Cow"/>
+                <outlet property="progressView" destination="Mal-Wl-3uP" id="oZu-Vj-cQv"/>
+            </connections>
+            <point key="canvasLocation" x="106.87022900763358" y="33.802816901408455"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <namedColor name="dPurple">
+            <color red="1" green="0.20399999618530273" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
